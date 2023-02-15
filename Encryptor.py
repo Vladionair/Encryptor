@@ -71,8 +71,8 @@ class Encryptor:
         self.deleting()
         try:
             path = filedialog.askopenfilename()
-            with open(path, 'r') as file:
-                data = file.read().encode()
+            with open(path, 'r', encoding='utf-8') as file:
+                data = file.read()
                 self.text_1.insert(1.0, data)
         except Exception:
             pass
